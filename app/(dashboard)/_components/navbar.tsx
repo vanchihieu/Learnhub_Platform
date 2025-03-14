@@ -1,4 +1,4 @@
-// import { NavbarRoutes } from "@/components/navabar-routes";
+import { NavbarRoutes } from "@/components/navabar-routes";
 
 import { MobileSidebar } from "./mobile-sidebar";
 
@@ -7,7 +7,7 @@ export const Navbar = () => {
     <div className="p-4 border-b h-full flex items-center bg-white shadow-sm">
       <MobileSidebar />
 
-      {/* <NavbarRoutes /> */}
+      <NavbarRoutes />
     </div>
   );
 };
