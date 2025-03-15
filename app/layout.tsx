@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import {
-  ClerkProvider,
-  SignedIn,
-  UserButton,
-} from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
+import { ToastProvider } from "@/components/providers/toaster-provider";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,12 +19,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body>
-          <header className="flex justify-end items-center p-4 gap-4 h-16">
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-          </header>
+        <body className={inter.className}>
+          {/* sonner toast */}
+          <ToastProvider />
+
           {children}
         </body>
       </html>

@@ -1,8 +1,11 @@
+import Link from 'next/link'
 import React from 'react'
 
 const CoursesPage = () => {
   return (
-    <div>CoursesPage</div>
+    <Link href={`/teacher/create`}>
+      New Course
+    </Link>
   )
 }
 
