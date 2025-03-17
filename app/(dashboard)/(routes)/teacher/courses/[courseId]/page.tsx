@@ -12,7 +12,7 @@ import { IconBadge } from "@/components/icon-badge";
 import { db } from "@/lib/db";
 
 // import { Actions } from "./_components/actions";
-// import { AttachmentForm } from "./_components/attachment-form";
+import { AttachmentForm } from "./_components/attachment-form";
 import { CategoryForm } from "./_components/category-form";
 // import { ChaptersForm } from "./_components/chapters-form";
 import { DescriptionForm } from "./_components/description-form";
@@ -133,7 +133,7 @@ const CourseIdPage = async ({ params }: { params: { courseId: string } }) => {
                 <h2 className="text-xl">Resources & Attachments</h2>
               </div>
 
-              {/* <AttachmentForm initialData={course} courseId={course.id} /> */}
+              <AttachmentForm initialData={course} courseId={course.id} />
             </div>
           </div>
         </div>
