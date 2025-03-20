@@ -114,7 +114,6 @@ export async function PATCH(
       },
     });
 
-    // 
     if (values?.videoUrl) {
       const existingMuxData = await db.muxData.findFirst({
         where: {

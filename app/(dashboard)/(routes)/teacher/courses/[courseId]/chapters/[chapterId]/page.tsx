@@ -3,12 +3,12 @@ import { ArrowLeft, Eye, LayoutDashboard, Video } from "lucide-react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-// import { Banner } from "@/components/banner";
+import { Banner } from "@/components/banner";
 import { IconBadge } from "@/components/icon-badge";
 import { db } from "@/lib/db";
 
 import { ChapterAccessForm } from "./_components/chapter-access-form";
-// import { ChapterActions } from "./_components/chapter-actions";
+import { ChapterActions } from "./_components/chapter-actions";
 // import { ChapterDescriptionForm } from "./_components/chapter-description-form";
 import { ChapterTitleForm } from "./_components/chapter-title-form";
 import { ChapterVideoForm } from "./_components/chapter-video-form";
@@ -45,12 +45,12 @@ const ChapterIdPage = async ({
 
   return (
     <>
-      {/* {!chapter.isPublished && (
+      {!chapter.isPublished && (
         <Banner
           variant="warning"
           label="This chapter is unpublished. It will not be visible in the course."
         />
-      )} */}
+      )}
 
       <div className="p-6">
         <div className="flex items-center justify-between">
@@ -71,12 +71,12 @@ const ChapterIdPage = async ({
                 </span>
               </div>
 
-              {/* <ChapterActions
+              <ChapterActions
                 disabled={!isComplete}
                 courseId={params.courseId}
                 chapterId={params.chapterId}
                 isPublished={chapter.isPublished}
-              /> */}
+              />
             </div>
           </div>
         </div>
