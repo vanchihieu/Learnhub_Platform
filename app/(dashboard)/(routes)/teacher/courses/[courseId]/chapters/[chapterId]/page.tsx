@@ -9,7 +9,7 @@ import { db } from "@/lib/db";
 
 import { ChapterAccessForm } from "./_components/chapter-access-form";
 import { ChapterActions } from "./_components/chapter-actions";
-// import { ChapterDescriptionForm } from "./_components/chapter-description-form";
+import { ChapterDescriptionForm } from "./_components/chapter-description-form";
 import { ChapterTitleForm } from "./_components/chapter-title-form";
 import { ChapterVideoForm } from "./_components/chapter-video-form";
 
@@ -95,11 +95,11 @@ const ChapterIdPage = async ({
                 chapterId={params.chapterId}
               />
 
-              {/* <ChapterDescriptionForm
+              <ChapterDescriptionForm
                 initialData={chapter}
                 courseId={params.courseId}
                 chapterId={params.chapterId}
-              /> */}
+              />
             </div>
 
             <div>
