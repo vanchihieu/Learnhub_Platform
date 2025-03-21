@@ -1,12 +1,30 @@
-import Link from 'next/link'
-import React from 'react'
+import { auth } from "@clerk/nextjs";
+import { redirect } from "next/navigation";
 
-const CoursesPage = () => {
+import { db } from "@/lib/db";
+
+import { columns } from "./_components/columns";
+import { DataTable } from "./_components/data-table";
+
+const CoursesPage = async () => {
+  const { userId } = auth();
+
+  if (!userId) return redirect("/");
+
+  const courses = await db.course.findMany({
+    where: {
+      userId,
+    },
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+
   return (
-    <Link href={`/teacher/create`}>
-      New Course
-    </Link>
-  )
-}
+    <div className="p-6">
+      <DataTable columns={columns} data={courses} />
+    </div>
+  );
+};
 
-export default CoursesPage
+export default CoursesPage;
