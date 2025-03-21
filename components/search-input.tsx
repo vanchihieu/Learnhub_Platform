@@ -12,11 +12,11 @@ export const SearchInput = () => {
   const [value, setValue] = useState("");
   const debouncedValue = useDebounce(value);
 
-  const searchParms = useSearchParams();
+  const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
 
-  const currentCategoryId = searchParms.get("categoryId");
+  const currentCategoryId = searchParams.get("categoryId");
 
   useEffect(() => {
     const url = qs.stringifyUrl(
