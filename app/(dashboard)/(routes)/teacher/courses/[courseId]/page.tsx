@@ -7,11 +7,11 @@ import {
 } from "lucide-react";
 import { redirect } from "next/navigation";
 
-// import { Banner } from "@/components/banner";
+import { Banner } from "@/components/banner";
 import { IconBadge } from "@/components/icon-badge";
 import { db } from "@/lib/db";
 
-// import { Actions } from "./_components/actions";
+import { Actions } from "./_components/actions";
 import { AttachmentForm } from "./_components/attachment-form";
 import { CategoryForm } from "./_components/category-form";
 import { ChaptersForm } from "./_components/chapters-form";
@@ -70,9 +70,9 @@ const CourseIdPage = async ({ params }: { params: { courseId: string } }) => {
 
   return (
     <>
-      {/* {!course.isPublished && (
+      {!course.isPublished && (
         <Banner label="This course is unpublished. It will not be visible to the students." />
-      )} */}
+      )}
 
       <div className="p-6">
         <div className="flex items-center justify-between">
@@ -83,11 +83,11 @@ const CourseIdPage = async ({ params }: { params: { courseId: string } }) => {
             </span>
           </div>
 
-          {/* <Actions
+          <Actions
             disabled={!isComplete}
             courseId={params.courseId}
             isPublished={course.isPublished}
-          /> */}
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">

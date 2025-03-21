@@ -38,7 +38,7 @@ export async function PATCH(
       },
     });
 
-    if (!publishedChaptersInCourse.length) {
+    if (!publishedChaptersInCourse.length) { 
       await db.course.update({
         where: {
           id: params.courseId,
