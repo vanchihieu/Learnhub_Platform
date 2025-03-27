@@ -39,6 +39,7 @@ export const CourseProgressButton = ({
         }
       );
 
+      // hiển thị confetti nếu chương trước chưa hoàn thành và là chương cuối cùng thì hiển thị confetti (hoàn thành khóa học)
       if (!isCompleted && !nextChapterId) confetti.onOpen();
 
       if (!isCompleted && nextChapterId)
